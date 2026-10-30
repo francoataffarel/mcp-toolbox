@@ -68,7 +68,7 @@ func (cfg Config) Initialize(context.Context) (tools.Tool, error) {
 		return nil, fmt.Errorf("description is required for tool %q", cfg.Name)
 	}
 
-	urlParameter := parameters.NewStringParameter(pageURLKey, "The full URL of the FHIR page to fetch. This would be the value of `Bundle.entry.link.url` field within the response returned from FHIR search or FHIR patient everything operations.")
+	urlParameter := parameters.NewStringParameter(pageURLKey, "The full URL of the FHIR page to fetch. This would be the value of the `Bundle.link.url` field (where `Bundle.link.relation` is `next`) within the response returned from FHIR search or FHIR patient everything operations.")
 	allParameters := parameters.Parameters{urlParameter}
 
 	return Tool{

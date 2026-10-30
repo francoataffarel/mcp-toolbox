@@ -28,7 +28,7 @@ kind: tool
 name: get_fhir_store
 type: cloud-healthcare-fhir-fetch-page
 source: my-healthcare-source
-description: Use this tool to fetch a page of FHIR resources from a FHIR Bundle's entry.link.url
+description: Use this tool to fetch a page of FHIR resources from a FHIR Bundle's next-page link (`Bundle.link.url`)
 ```
 
 ## Reference
@@ -43,4 +43,4 @@ description: Use this tool to fetch a page of FHIR resources from a FHIR Bundle'
 
 | **field** | **type** | **required** | **description**                                                                                                                                                                               |
 |-----------|:--------:|:------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| pageURL   |  string  |     true     | The full URL of the FHIR page to fetch. This would usually be the value of `Bundle.entry.link.url` field within the response returned from FHIR search or FHIR patient everything operations. |
+| pageURL   |  string  |     true     | The full URL of the FHIR page to fetch. This would usually be the value of the `Bundle.link.url` field (where `Bundle.link.relation` is `next`) within the response returned from FHIR search or FHIR patient everything operations. |

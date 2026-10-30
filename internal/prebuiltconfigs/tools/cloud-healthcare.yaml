@@ -71,7 +71,7 @@ source: healthcare-source
 kind: tool
 name: fhir_fetch_page
 type: cloud-healthcare-fhir-fetch-page
-description: Use this tool to fetche a page of FHIR resources from a FHIR store
+description: Use this tool to fetch a page of FHIR resources from a FHIR store
 source: healthcare-source
 ---
 kind: tool
